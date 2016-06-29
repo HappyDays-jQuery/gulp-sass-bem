@@ -1,0 +1,28 @@
+{
+  "name": "gulp-sass-bem",
+  "version": "0.0.1",
+  "description": "basic coding.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "bem"
+  ],
+  "author": "HappyDays.jQuery",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-cssnext": "^1.0.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HappyDays-jQuery/gulp-sass-bem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HappyDays-jQuery/gulp-sass-bem/issues"
+  },
+  "homepage": "https://github.com/HappyDays-jQuery/gulp-sass-bem#readme"
+}
