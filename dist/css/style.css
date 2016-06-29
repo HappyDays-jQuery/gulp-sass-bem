@@ -1,4 +1,18 @@
+@charset "UTF-8";
+/*
+ベンダープレフィクスの自動付与
+*/
 .header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+/*
+変数
+テーマカラーの変更とか便利
+
+$名前:セットする値;
+*/
+body {
+  color: #ffffff;
+  font-size: 16px; }
