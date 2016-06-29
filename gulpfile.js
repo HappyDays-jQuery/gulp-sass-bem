@@ -5,21 +5,23 @@ var gulp = require('gulp'),
 
 
 var paths = {
-  'scss': 'src/scss/',
-  'css': 'dist/css/'
+    'scss': 'src/scss/',
+    'css': 'dist/css/'
 };
 
-gulp.task('sass', function() {
-  return gulp.src(paths.scss + '**/*.scss')
-    .pipe(sass())
-    .on('error', function(err) {
-      console.log(err.message);
-    })
-    .pipe(cssnext())
-    .pipe(gulp.dest(paths.css))
+gulp.task('sass', function () {
+    return gulp.src(paths.scss + '**/*.scss')
+        .pipe(sass())
+        .on('error', function (err) {
+            console.log(err.message);
+        })
+        .pipe(cssnext({
+            browsers: 'last 4 versions'
+        }))
+        .pipe(gulp.dest(paths.css))
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
     connect.server({
         root: 'dist/',
         livereload: true
@@ -35,4 +37,4 @@ gulp.task('watch', function () {
     gulp.watch(['./dist/*.html'], ['html']);
 });
 
-gulp.task('default', ['connect','sass', 'watch']);
+gulp.task('default', ['connect', 'sass', 'watch']);
