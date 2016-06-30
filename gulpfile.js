@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    cssnext = require('gulp-cssnext'),
+    postcss = require('gulp-postcss'),
     connect = require('gulp-connect');
 
 
@@ -10,15 +10,17 @@ var paths = {
 };
 
 gulp.task('scss', function () {
-    return gulp.src(paths.scss + '**/*.scss')
-        .pipe(sass())
-        .on('error', function (err) {
-            console.log(err.message);
-        })
-        .pipe(cssnext({
-            browsers: 'last 4 versions'
-        }))
-        .pipe(gulp.dest(paths.css))
+  return (
+    gulp.src('./src/**/*.scss')
+    .pipe(postcss([
+      require("postcss-import")(),
+      require("postcss-url")(),
+      require("cssnano")(),
+      require("postcss-browser-reporter")(),
+      require("postcss-reporter")(),
+    ]))
+    .pipe(gulp.dest('./dest'))
+  )
 });
 
 gulp.task('watch-scss', function(){
