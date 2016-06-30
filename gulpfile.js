@@ -15,7 +15,7 @@ gulp.task('scss', function () {
     .pipe(postcss([
       require("postcss-import")(),
       require("postcss-url")(),
-      require("cssnano")(),
+      //require("cssnano")(),
       require("postcss-browser-reporter")(),
       require("postcss-reporter")(),
     ]))

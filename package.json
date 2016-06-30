@@ -23,7 +23,8 @@
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-reporter": "^1.3.3",
-    "postcss-url": "^5.1.2"
+    "postcss-url": "^5.1.2",
+    "sass-bem": "^2.5.3"
   },
   "dependencies": {
     "sass-bem": "^2.5.3"
