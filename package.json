@@ -16,7 +16,8 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^4.1.0",
     "gulp-cssnext": "^1.0.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "sc5-styleguide": "^1.0.0"
   },
   "dependencies": {
     "sass-bem": "^2.5.3"
