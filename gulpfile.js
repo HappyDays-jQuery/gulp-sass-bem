@@ -9,7 +9,7 @@ var paths = {
     'css': 'dist/css/'
 };
 
-gulp.task('sass', function () {
+gulp.task('scss', function () {
     return gulp.src(paths.scss + '**/*.scss')
         .pipe(sass())
         .on('error', function (err) {
@@ -19,6 +19,10 @@ gulp.task('sass', function () {
             browsers: 'last 4 versions'
         }))
         .pipe(gulp.dest(paths.css))
+});
+
+gulp.task('watch-scss', function(){
+    gulp.watch('./src/scss/**/*.scss', ['scss']);
 });
 
 gulp.task('connect', function () {
@@ -33,8 +37,8 @@ gulp.task('html', function () {
         .pipe(connect.reload());
 });
 
-gulp.task('watch', function () {
+gulp.task('watch-html', function () {
     gulp.watch(['./dist/*.html'], ['html']);
 });
 
-gulp.task('default', ['connect', 'sass', 'watch']);
+gulp.task('default', ['connect', 'watch-scss', 'watch-html']);
