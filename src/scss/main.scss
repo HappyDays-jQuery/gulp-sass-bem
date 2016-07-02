@@ -1,0 +1,153 @@
+@import "../../node_modules/sass-bem/bem";
+@import "reset";
+@import "variables";
+
+body {
+  font: 100% $font-stack;
+  background-color: $color-background;
+}
+
+a {
+  color: #00f;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: #00f;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#main {
+  margin: 2em auto;
+  padding: 0;
+  width: 80%;
+}
+
+#logo {
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 0 30px;
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+nav {
+  .primary {
+    font-size: 1em;
+    margin-bottom: 40px;
+  }
+
+  .social {
+    list-style: none;
+    height: 1em;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      height: 1em;
+      line-height: 1em;
+      padding-right: 1em;
+      position: relative;
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#content {
+  clear: both;
+  margin: 1em 0;
+}
+
+article {
+  .post {
+    margin: 5em 0;
+    padding: 0;
+
+    header {
+      h1 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 2em;
+      }
+
+      a {
+        color: #333;
+      }
+    }
+  }
+
+  .content {
+    a {
+      color: #32abc9;
+      padding: 0 0.2em;
+      -webkit-transition-duration: 0.33s;
+      -webkit-transition-property: color, background;
+
+      &:link,
+      &:visited {
+        border-radius: 1px;
+      }
+
+      &:hover {
+        background-color: #32abc9;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    blockquote {
+      background: #eee;
+      border-left: 3px solid #ddd;
+      margin-left: 0;
+      padding: 0 1em;
+    }
+
+    pre {
+      background: #333;
+      color: #fff;
+      margin-left: 0;
+      padding: .5em;
+      width: auto;
+      overflow-x: auto;
+      font-family: monospace;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    img {
+      border: none;
+    }
+  }
+}
+
+footer {
+  font-size: .8em;
+  text-align: right;
+
+  address {
+    font-style: normal;
+  }
+
+  p {
+    margin: .5em 0;
+    padding: 0;
+    line-height: 1;
+  }
+}
+
