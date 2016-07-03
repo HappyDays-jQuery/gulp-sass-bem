@@ -1,62 +1,56 @@
 # gulp-sass-bem
+this project run commands first.
 
-```shell
+```
 npm install
 ```
-# BEMが出来た経緯
-- Fast-to-develop, long-lived projects
-素早い開発と、長期間に渡るプロジェクトのメンテナンス
-- Team scalability
-チームのスケーラビリティ
-- Code reuse
-コードの再利用性
+# Gulp
+start & watch *.html, *.scss
 
-# MindMEMding
+```
+gulp
+```
 
-```css
-.block {}
-.block__element {}
-.block--modifier {}
+## task
+
+Live Reload #include default task
+
 ```
-```css
-.site-search {} /* Block */
-.site-search__field {} /* Element */
-.site-search--full {} /* Modifier */
+gulp connect
 ```
-```css
-.person {}
-.person__hand {}
-.person--female {}
-.person--female__hand {}
-.person__hand--left {}
+
+HTML reload #include default task
+
 ```
-```html
-<form class="site-search  site-search--full">
-    <input type="text" class="site-search__field">
-    <input type="Submit" value ="Search" class="site-search__button">
-</form>
+gulp html
+or
+gulp watch-html
 ```
-```css
-.media {}
-.media__img {}
-.media__img--rev {}
-.media__body {}
+
+SCSS compile and minify css #include default task
+
 ```
-```html
-<div class="media">
-    <img src="logo.png" alt="Foo Corp logo" class="img-rev">
-    <div class="body">
-        <h3 class="alpha">Welcome to Foo Corp</h3>
-        <p class="lede">Foo Corp is the best, seriously!</p>
-    </div>
-</div>
+gulp scss
+or
+gulp watch-scss
 ```
-```html
-<div class="media">
-    <img src="logo.png" alt="Foo Corp logo" class="media__img--rev">
-    <div class="media__body">
-        <h3 class="alpha">Welcome to Foo Corp</h3>
-        <p class="lede">Foo Corp is the best, seriously!</p>
-    </div>
-</div>
+
+RUN Styleguide #include default task
+
+```
+gulp styleguide
+or
+gulp watch-scss
+```
+
+# View Styleguide
+
+```
+open http://localhost:3000/
+```
+
+# View public
+
+```
+open http://localhost:8080/
 ```
