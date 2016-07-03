@@ -62,7 +62,7 @@ gulp.task('watch-html', function () {
 gulp.task('styleguide:generate', function () {
     return gulp.src(paths.scss + '**/*.scss')
         .pipe(styleguide.generate({
-            title: 'My Styleguide',
+            title: 'Styleguide',
             server: true,
             rootPath: paths.build,
             overviewPath: 'README.md'
