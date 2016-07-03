@@ -1,4 +1,30 @@
+// Variables
+//
+// _variables - 変数定義
+//
+// Markup:
+// なし
+//
+// Styleguide 2.0
+
+// $font-stack
+//
+// _variables - font stack
+//
+// Markup:
+// *{font-family: $font-stack;}
+//
+// Styleguide 2.1
 $font-stack: menlo, "andale mono", consolas, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Osaka", "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
 
+// $color-*
+//
+// _variables - colors
+//
+// Markup:
+// *{background-color: $color-background;}
+// *{color: $color-body;}
+//
+// Styleguide 2.2
 $color-background: #f3f2ee;
 $color-body: #1f0909;

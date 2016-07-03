@@ -1,20 +1,44 @@
+// Main
+//
+// @import - normalize, bem, reset, variables
+//
+// Markup:
+// なし
+//
+// Styleguide 3.0
+@import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/sass-bem/bem";
 @import "reset";
 @import "variables";
 
+// Main - body
+//
+// body - font, background
+//
+// Markup:
+// <body>コンテンツ</body>
+//
+// Styleguide 3.1
 body {
   font: 100% $font-stack;
   background-color: $color-background;
 }
 
+// Main - a
+//
+// a - 文字色、デコレーション設定
+//
+// Markup:
+// <a href="#">リンク</a>
+//
+// Styleguide 3.2
 a {
   color: #00f;
   text-decoration: none;
 
   &:link,
   &:visited {
-    color: #00f;
-    text-decoration: none;
+    color: #f0f;
   }
 
   &:hover {
@@ -22,12 +46,28 @@ a {
   }
 }
 
+// Main - #main
+//
+// #main - レイアウト要素（マージン、パッディング、サイズ）
+//
+// Markup:
+// <body><div id="#main">メインコンテンツ</div></body>
+//
+// Styleguide 3.3
 #main {
   margin: 2em auto;
   padding: 0;
   width: 80%;
 }
 
+// Main - #logo
+//
+// #logo - レイアウト要素（マージン、パッディング、サイズ）
+//
+// Markup:
+// <body><div id="#logo"><a href="#">Logo</a></div></body>
+//
+// Styleguide 3.4
 #logo {
   font-size: 3em;
   font-style: normal;
@@ -40,6 +80,20 @@ a {
   }
 }
 
+// Main - nav
+//
+// nav - レイアウト要素（マージン、パッディング、サイズ）
+//
+// Markup:
+// <nav>
+//  <div class="primary">primary</div>
+//  <div class="social">
+//    <li><a href="#">list1</a></li>
+//    <li><a href="#">list2</a></li>
+//  </div>
+// </nav>
+//
+// Styleguide 3.5
 nav {
   .primary {
     font-size: 1em;
@@ -67,11 +121,40 @@ nav {
   }
 }
 
+// Main - content
+//
+// #content - レイアウト要素（マージン、パッディング、サイズ）
+//
+// Markup:
+// <div id="#content">content</div>
+//
+// Styleguide 3.6
 #content {
   clear: both;
   margin: 1em 0;
 }
 
+// Main - article
+//
+// article - レイアウト要素（マージン、パッディング、サイズ）
+//
+// Markup:
+// <article>article
+//   <div class="post">post</div>
+//   <header>
+//     <h1>h1</h1>
+//     <a href="#">a</a>
+//   </header>
+//  <div class="content">content
+//    <a href="#">a</a>
+//    <blockquote>blockquote</blockquote>
+//    <pre>pre</pre>
+//    <p>p</p>
+//    <img />
+//  </div>
+// </article>
+//
+// Styleguide 3.7
 article {
   .post {
     margin: 5em 0;
@@ -136,6 +219,17 @@ article {
   }
 }
 
+// Main - footer
+//
+// footer - レイアウト要素（マージン、パッディング、サイズ）
+//
+// Markup:
+// <footer>footer
+//   <address>address</address>
+//   <p>p</p>
+// </footer>
+//
+// Styleguide 3.8
 footer {
   font-size: .8em;
   text-align: right;
